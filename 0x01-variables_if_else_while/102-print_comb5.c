@@ -2,40 +2,35 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there*/
-/**                                                                                                                                                                                                        
- *main - Entry point                                                                                                                                                                                       
+/**
+ *main - Entry point
+ *
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
- 	int ch;
+	int ch;
 	int i;
 	int j;
-	int k;
 	int you = 0;
 
-	for (ch = 0 ; ch <= 9 ; ch++)
+	for (ch = 0 ; ch <= 8 ; ch++)
 	{
-         	for (i = 0 ; i <= 9 ; i++)
+		for (i = ch ; i <= 9 ; i++)
 		{
-		  for (j = 0 ; j <= 9 ; j++)
-		    {
-		      for (k = 0 ; k <= 9 ; k++)
+			for (j = i; j <= 9 ; j++)
 			{
-                          if (you != 0)
+				if (i != ch && i != j && j != ch)
 				{
-
-				  
-                                 	putchar (ch + '0');
+					putchar (ch + '0');
 					putchar (i + '0');
-					putchar(' ');
 					putchar (j + '0');
-					putchar (k + '0');
-					if (you >= 0)
+					if (you < 119)
 					{
-                                         	putchar (',');
-                                                putchar (' ');
+						putchar (',');
+						putchar (' ');
 						you++;
-					}}}}}}
+					}}}}}
 	putchar ('\n');
 
 	return (0);
