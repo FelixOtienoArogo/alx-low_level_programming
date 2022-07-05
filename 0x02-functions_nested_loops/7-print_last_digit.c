@@ -28,6 +28,6 @@ else
 {
 b = a + 'A' - 1;
 _putchar(b);
-return (b);
+return (b-96);
 }
 }
