@@ -19,8 +19,13 @@ a = 0 - c;
 a = a % 10;
 }
 if ((a >= 0) && (a <= 9))
+{
 _putchar(a + '0');
-else
-_putchar(a + 'A');
 return (a);
+}
+else
+{
+_putchar(a + 'A' - 1);
+return (a);
+}
 }
