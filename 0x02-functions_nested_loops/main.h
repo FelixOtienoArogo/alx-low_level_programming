@@ -9,6 +9,7 @@
  */
 int _putchar(char c);
 int _abs(int c);
+void jack_bauer(void);
 int _islower(int c);
 int _isalpha(int c);
 int print_sign(int n);
