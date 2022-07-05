@@ -53,14 +53,14 @@ b = (i / 100) % 10;
 _putchar(b +  '0');
 _putchar(c +  '0');
 _putchar(d +  '0');
-if (i < 100)
+ }
+if ((i < 100) && (i >= 98))
 {
 int x, y;
 x = i % 10;
 y = (i / 10) % 10;
 _putchar(y + '0');
 _putchar(x + '0');
-}
 }
 if (i != 98)
 {
