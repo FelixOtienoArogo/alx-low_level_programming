@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include "main.h"
+#include <stdio.h>
 /* more headers goes there */
 
 /**
@@ -17,8 +17,8 @@ int main(void)
 	/* your code goes there */
 	for (i = 0; i <= 7; i++)
 	{
-	_putchar(a[i]); }
-	_putchar('\n');
+	putchar(a[i]); }
+	putchar('\n');
 
 
 	return (0);
