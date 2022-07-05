@@ -7,6 +7,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
+void times_table(void);
 int _putchar(char c);
 int _abs(int c);
 void jack_bauer(void);
