@@ -15,6 +15,7 @@ for (j = 0; j <= 9; j++)
 {
 int m;
 m = i * j;
+_putchar (m);
 if (m < 10)
 {
 _putchar (m + '0');

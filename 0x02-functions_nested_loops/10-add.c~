@@ -1,0 +1,28 @@
+#include "main.h"
+/**
+ *int add - Entry point
+ *
+ *Return: Always 0 (Success)
+ */
+
+int add(int a, int b)
+{
+int m;
+m = a + b;
+
+if (m < 10)
+{
+_putchar (m + '0');
+}
+else
+{
+int k, l;
+k = m % 10;
+l = (m / 10) % 10;
+_putchar (l + '0');
+_putchar (k + '0');
+
+}
+_putchar('\n');
+return (m);
+}
