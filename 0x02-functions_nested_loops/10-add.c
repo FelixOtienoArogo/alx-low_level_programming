@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- *int add - Entry point
+ *add - Entry point
+ *@a: First member
+ *@b: Second member
  *
  *Return: Always 0 (Success)
  */
