@@ -1,7 +1,9 @@
 /**
- *function to display the alphabet
+ *main - Entry point
  *
+ *Return: Always 0 (Success)
  */
+
 #include "main.h"
 
 void print_alphabet(void)
