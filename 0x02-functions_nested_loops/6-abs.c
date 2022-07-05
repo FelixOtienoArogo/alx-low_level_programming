@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *print_sign - Entry point
+ *_abs - Entry point
  *@c: First member
  *
  *Return: Always 0 (Success)
