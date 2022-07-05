@@ -3,7 +3,7 @@
 /**
  *print_last_digit - Entry point
  *@c: First member
- *@b: Third member
+ *
  *
  *Return: Always 0 (Success)
 */
@@ -28,6 +28,6 @@ else
 {
 b = a + 'A' - 1;
 _putchar(b);
-return (b- 'a');
+return (b - '0');
 }
 }
