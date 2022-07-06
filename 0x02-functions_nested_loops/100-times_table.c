@@ -21,9 +21,7 @@ if (m < 10)
 {
 if (j != 0)
 {
-if (a > 100)
 _putchar(' ');
-if (a > 10)
 _putchar(' ');
 }
 _putchar (m + '0');
@@ -39,11 +37,14 @@ long int k, l , g;
 k = m % 10;
 l = (m / 10) % 10;
 g = (m / 100) % 10;
-if ((a > 99) && m <= 99)
-_putchar(' ');
+
 if (m > 99)
 {
 _putchar (g + '0');
+}
+else
+{
+  _putchar (' ');
 }
 _putchar (l + '0');
 _putchar (k + '0');
