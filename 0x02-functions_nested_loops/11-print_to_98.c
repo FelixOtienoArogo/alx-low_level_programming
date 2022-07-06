@@ -78,11 +78,16 @@ for (i = n ; i <= 98; i++)
 {
 if (i < 0)
 {
-int e, f;
+int e, f, g;
 m = 0 - i;
-e = (m/10) % 10;
+e = ( m / 10) % 10;
 f = m % 10;
+g = (m / 100) % 10;
 _putchar('-');
+if(m > 99)
+{
+_putchar(g + '0');
+}
 if(m > 9)
 {
 _putchar(e + '0');
