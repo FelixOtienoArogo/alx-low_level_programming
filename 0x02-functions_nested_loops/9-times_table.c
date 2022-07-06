@@ -22,7 +22,7 @@ if (j <= 8)
 {
 _putchar(',');
 _putchar(' ');
-_putchar(' ');
+
 }
 }
 else
@@ -35,7 +35,7 @@ _putchar (k + '0');
 if (j <= 8)
 {
 _putchar (',');
-_putchar (' ');
+
 }
 }
 }
