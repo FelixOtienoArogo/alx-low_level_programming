@@ -12,17 +12,14 @@ for (i = 0; i < 50; i++)
 {
 for (j = i; j > 0; j--)
 {
-_putchar(((n / 100000) % 10) + '0');
-_putchar(((n / 10000) % 20) + '0');
-_putchar(((n / 1000) % 240) + '0');
-_putchar(((n / 100) % 2440) + '0');
-_putchar(((n / 10) % 24420) + '0');
 _putchar((n % 10) + '0');
-_putchar('\n');
-
+_putchar(',');
+_putchar(' ');
+ 
 n = n * j;
 }
 }
+_putchar('\n');
 return (0);
 }
 
