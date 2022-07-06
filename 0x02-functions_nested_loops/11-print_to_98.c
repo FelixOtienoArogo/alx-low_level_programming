@@ -79,13 +79,17 @@ for (i = n ; i <= 98; i++)
 if (i < 0)
 {
 int e, f;
-m = 0 - n;
+m = 0 - i;
 e = (m/10) % 10;
 f = m % 10;
 _putchar('-');
 _putchar(e + '0');
 _putchar(f +'0');
-
+if (i < 98)
+{
+_putchar(',');
+_putchar(' ');
+}
 }
 if ((i < 10)&&(i >= 0))
 {
