@@ -7,9 +7,12 @@
  */
 int main(void)
 {
-long int  c, l, n, p, q, r, s, t;
+long int  i, c, l, n, p, q, r, s, t;
 c = 4613732;
 
+for (i = 0 ; i < 50 ; i++)
+{
+}
 l = (c / 1000000) % 10;
 n = (c / 100000) % 10;
 p = (c / 10000) % 10;
