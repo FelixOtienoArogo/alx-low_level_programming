@@ -22,7 +22,7 @@ if (j <= 8)
 {
 _putchar(',');
 _putchar(' ');
-
+_putchar(' ');
 }
 }
 else
