@@ -17,7 +17,7 @@ long int m;
 m = i * j;
 if (m < 10)
 {
-if ( j != 0)
+if (j != 0)
 {
 _putchar(' ');
 }
