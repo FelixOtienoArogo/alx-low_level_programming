@@ -103,7 +103,7 @@ _putchar(',');
 _putchar(' ');
 }
 }
-if (i > 10 )
+if (i >= 10 )
 {
 int j, k;
 j = i % 10;
