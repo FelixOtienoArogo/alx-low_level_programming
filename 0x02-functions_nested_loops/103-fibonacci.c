@@ -34,7 +34,6 @@ _putchar(r + '0');
 if (c > 10)
 _putchar(s + '0');
 _putchar(t + '0');
- 
 _putchar('\n');
 return (0);
 }
