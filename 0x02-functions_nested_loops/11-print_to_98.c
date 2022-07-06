@@ -83,7 +83,10 @@ m = 0 - i;
 e = (m/10) % 10;
 f = m % 10;
 _putchar('-');
+if(m > 9)
+{
 _putchar(e + '0');
+}
 _putchar(f +'0');
 if (i < 98)
 {
