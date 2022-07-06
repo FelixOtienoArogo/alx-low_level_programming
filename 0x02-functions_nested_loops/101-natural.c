@@ -16,6 +16,10 @@ if ((i % 3 == 0) || (i % 5 == 0))
 n = n + i;
 }
 }
+_putchar((n % 100000) + '0');
+_putchar((n % 10000) + '0');
+_putchar((n % 1000) + '0');
+_putchar((n % 100) + '0');
 _putchar((n % 10) + '0');
 return (0);
 }
