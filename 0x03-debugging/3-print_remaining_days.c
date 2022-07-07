@@ -17,7 +17,7 @@ if (year % 4 == 0)
 printf("Day of the year: %d\n", day);
 if (year % 100 == 0 && year % 400 != 0)
 printf("Remaining days: %d\n", 365 - day);
-else
+else if (year % 4000 != 0)
 printf("Remaining days: %d\n", 366 - day);
 }
 else
