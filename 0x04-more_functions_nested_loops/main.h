@@ -4,9 +4,10 @@
 
 #include <stdio.h>
 
+int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
-int convert_day(int month, int day);
+void print_numbers(void);
 
 #endif /* MAIN_H */
