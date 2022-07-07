@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_isupper - Entry point
+ *_isdigit - Entry point
  *@c: First member
  *
  *Return: Always 0 (Success)
@@ -14,4 +14,3 @@ return (1);
 else
 return (0);
 }
-
