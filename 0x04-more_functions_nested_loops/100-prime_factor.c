@@ -39,6 +39,6 @@ n = n / (i + 2);
 
 if (n > 4)
 maxPrime = n;
-printf("%ld \n", maxPrime);
+printf("%ld\n", maxPrime);
 return (0);
 }
