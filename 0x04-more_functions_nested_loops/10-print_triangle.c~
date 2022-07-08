@@ -1,0 +1,32 @@
+#include "main.h"
+
+/**
+ *print_triangle - Entry point
+ *@size: First member
+ *
+ *Return: Always 0 (Success)
+ */
+
+void print_triangle(int size)
+{
+int i, j, k, a;
+if (size > 0)
+{
+for (i = 1; i < size ; i++)
+{
+a = 0;
+for (j = 0; j < size - i ; j++)
+{
+_putchar (' ');
+a++;
+}
+for (k = a; k < size; k++)
+{
+_putchar ('#');
+}
+_putchar ('\n');
+}
+}
+else
+_putchar ('\n');
+}
