@@ -20,7 +20,7 @@ printf("FizzBuzz ");
 if ((i % 5 != 0) && (i % 3 != 0))
 printf("%d ", i);
 }
-printf('\b');
+printf("\b");
 printf("\n");
 return (0);
 }
