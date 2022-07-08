@@ -12,15 +12,16 @@ int i;
 for (i = 1; i <= 100; i++)
 {
 if ((i % 3 == 0) && (i % 5 != 0))
-printf("Fizz ");
+printf("Fizz");
 if ((i % 5 == 0) && (i % 3 != 0))
-printf("Buzz ");
+printf("Buzz");
 if ((i % 5 == 0) && (i % 3 == 0))
-printf("FizzBuzz ");
+printf("FizzBuzz");
 if ((i % 5 != 0) && (i % 3 != 0))
-printf("%d ", i);
+printf("%d", i);
+if(i != 100)
+printf(" ");
 }
-printf("\b");
 printf("\n");
 return (0);
 }
