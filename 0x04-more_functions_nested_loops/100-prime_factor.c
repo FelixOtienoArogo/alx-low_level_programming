@@ -8,19 +8,37 @@
  */
 int main(void)
 {
-long int i, j, a;
-for (i = 2; i <= sqrt(612852475143) ; i++)
+
+long int n = 612852475143;
+long int maxPrime = -1;
+int i;
+while (n % 2 == 0)
 {
-if (612852475143 % i == 0)
+maxPrime = 2;
+n >>= 1;
+}
+
+while (n % 3 == 0)
 {
-for (j = 2; j <= sqrt(i); j++)
+maxPrime = 3;
+n = n / 3;
+}
+for (i = 5; i <= sqrt(n); i += 6)
 {
-if (i % j == 0)
-a = j;
+while (n % i == 0)
+{
+maxPrime = i;
+n = n / i;
+}
+while (n % (i + 2) == 0)
+{
+maxPrime = i + 2;
+n = n / (i + 2);
 }
 }
-}
-printf("%ld", a);
-printf("\n");
+
+if (n > 4)
+maxPrime = n;
+printf("%ld \n", maxPrime);
 return (0);
 }
