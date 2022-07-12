@@ -1,21 +1,20 @@
 #include<stdio.h>
+#include<string.h>
 
-/**                                                                                                                                                                                                        
- * puts2 - this function prints a string                                                                                                                                                                   
- * @str: a pointer                                                                                                                                                                                         
- *                                                                                                                                                                                                         
- * Return: nothing.                                                                                                                                                                                        
+/**
+ * puts_half - this function prints a half of a string
+ * @str: a pointer
+ *
+ * Return: nothing.
  */
-void puts2(char *str)
+void puts_half(char *str)
 {
 int i;
-i = 0;
+i = ((sizeof(str) + 2) / 2);
 while (*str != '\0')
 {
-if (i % 2 == 0)
-printf("%c", *(str));
+printf("%c", *(str + i));
 str++;
-i++;
 }
 printf("\n");
 }
