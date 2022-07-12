@@ -11,12 +11,15 @@ int print_array(int *a, int n)
 int counter;
 
 counter = 0;
+if (n >= 0)
+{
 while (counter != n)
 {
 printf("%d", *(a + counter));
 if (counter < n - 1)
 printf(", ");
 counter++;
+}
 }
 printf("\n");
 return (counter);
