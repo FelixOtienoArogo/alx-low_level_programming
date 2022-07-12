@@ -14,7 +14,7 @@ int i, j, k;
 j = strlen(str);
 if (j % 2 != 0)
 i = ((strlen(str) + 2) / 2);
- if (j % 2 == 0)
+if (j % 2 == 0)
 i = ((strlen(str) + 1) / 2);
 for (k = i; k < j; k++)
 {
