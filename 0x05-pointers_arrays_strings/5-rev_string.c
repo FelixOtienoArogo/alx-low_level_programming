@@ -10,11 +10,14 @@ void rev_string(char *s)
 {
 int temp, i, j;
 i = sizeof(s) + 1;
+if (sizeof(s) != 0)
+{
 for (j = 0; j < i; j++)
 {
 temp = *(s + j);
 *(s + j) = *(s + i);
 *(s + i) = temp;
 i--;
+}
 }
 }
