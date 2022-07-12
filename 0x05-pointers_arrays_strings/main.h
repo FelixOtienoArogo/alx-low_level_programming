@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 void reset_to_98(int *n);
-int largest_number(int a, int b, int c);
+void swap_int(int *a, int *b);
 void print_remaining_days(int month, int day, int year);
 int convert_day(int month, int day);
 
