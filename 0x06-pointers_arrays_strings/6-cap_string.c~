@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+
+/**
+ * cap_string - this function compares strings pointed to by
+ * @str: first pointer
+ *
+ *
+ * Return: pointer.
+ */
+char *cap_string(char *str)
+{
+char i, j;
+int k, l;
+l = strlen(str);
+for (k = 0; k <= l; k++)
+{
+j = 'A';
+if ( *(str + k -1) == ' ' || k == 0 || *(str + k -1) == '\n' || *(str + k -1) == '\t')
+{
+for (i = 'a'; i <= 'z'; i++)
+{
+if (*(str + k) == i)
+*(str + k) = j;
+j++;
+}
+}
+}
+return (str);
+}
