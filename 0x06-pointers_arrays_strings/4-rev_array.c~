@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+/**
+ * reverse_array - this function reverses an array
+ * @a: a pointer
+ * @n: a member
+ *
+ * Return: nothing.
+ */
+void reverse_array(int *a, int n)
+{
+int temp, i, j;
+i = n + 1;
+if (n != 0)
+{
+for (j = 0; j < i / 2; j++)
+{
+temp = *(a + j);
+*(a + j) = *(a + n -1 - j);
+*(a + n -1 - j) = temp;
+}
+}
+}
