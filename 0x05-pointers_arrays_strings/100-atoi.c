@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdint.h>
 
 /**
  * _atoi - this function converts a string  to an integer
@@ -9,7 +10,7 @@
  */
 int _atoi(char *s)
 {
-int i, j, temp, sign;
+int64_t i, j, temp, sign;
 char c;
 sign = 1;
 j = strlen(s) + 1;
