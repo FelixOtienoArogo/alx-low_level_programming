@@ -6,7 +6,7 @@
 int _atoi(char *s);
 char *_strcpy(char *dest, char *src);
 void print_array(int *a, int n);
-void puts_half(char *str);
+char *rot13(char *);
 char *leet(char *);
 char *string_toupper(char *);
 void reverse_array(int *a, int n);
