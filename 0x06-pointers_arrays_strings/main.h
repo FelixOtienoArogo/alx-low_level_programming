@@ -3,9 +3,10 @@
 
 #include <stdio.h>
 
+int _putchar(char c);
 int _atoi(char *s);
 char *_strcpy(char *dest, char *src);
-void print_array(int *a, int n);
+void print_number(int n);
 char *rot13(char *);
 char *leet(char *);
 char *string_toupper(char *);
