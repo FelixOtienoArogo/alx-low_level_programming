@@ -10,20 +10,20 @@
  */
 char *leet(char *str)
 {
-int k, l;
+int k, l, m, n;
+char lit1[11] = "aAeEoOtTlL";
+char lit2[11] = "4433007711";
 l = strlen(str);
+/*lit1 = 'a','A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};*/
+/*lit2 = {'4', '4', '3', '3', '0', '0','7', '7', '1', '1'};*/
+n = strlen(lit1);
 for (k = 0; k <= l; k++)
 {
-if (*(str + k) == 'a' || *(str + k) == 'A')
-*(str + k) = '4';
-while  (*(str + k) == 'e' || *(str + k) == 'E')
-*(str + k) = '3';
-while (*(str + k) == 'o' || *(str + k) == 'O')
-*(str + k) = '0';
-while (*(str + k) == 't' || *(str + k) == 'T')
-*(str + k) = '7';
-while (*(str + k) == 'l' || *(str + k) == 'L')
-*(str + k) = '1';
+for (m = 0; m <= n; m++)
+{
+if (*(str + k) == *(lit1 + m))
+*(str + k) = *(lit2 + m);
+}
 }
 return (str);
 }
