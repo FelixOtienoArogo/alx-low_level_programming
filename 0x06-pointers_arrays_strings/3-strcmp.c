@@ -14,8 +14,8 @@ int i, j;
 j = strlen(s1) + 1;
 for (i = 0; i < j; i++)
 {
-if(*(s1 + i) != *(s2 + i))
+if (*(s1 + i) != *(s2 + i))
 return (*(s1 + i) - *(s2 + i));
 }
- return (0);
+return (0);
 }
