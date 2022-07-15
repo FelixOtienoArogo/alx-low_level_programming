@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char *_strncpy(char *, char *, int);
+int _strcmp(char *, char *);
 
 /**
  * main - check the code for Holberton School students.
@@ -9,25 +9,9 @@ char *_strncpy(char *, char *, int);
  */
 int main(void)
 {
-	char s1[98];
-	char *p;
-	int i;
+	char s1[] = "Holberton";
+	char s2[] = "Holbeerton";
 
-	for (i = 0; i < 98 - 1; i++)
-		s1[i] = '-';
-	s1[i] = '\0';
-	printf("%s\n", s1);
-	p = _strncpy(s1, "", 4);
-	printf("%s\n", s1);
-	printf("%s\n", p);
-	for (i = 0; i < 98; i++)
-	{
-		if (i % 10)
-			printf(" ");
-		if (!(i % 10) && i)
-			printf("\n");
-		printf("0x%02x", s1[i]);
-	}
-	printf("\n");
+	printf("%d\n", _strcmp(s1, s2));
 	return (0);
 }

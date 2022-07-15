@@ -12,14 +12,10 @@ int _strcmp(char *s1, char *s2)
 {
 int i, j;
 j = strlen(s1) + 1;
-i = 0;
-for (; i < j;)
+for (i = 0; i < j; i++)
 {
 if(*(s1 + i) != *(s2 + i))
 return (*(s1 + i) - *(s2 + i));
-else
-return (0);
-i++;
 }
  return (0);
 }
