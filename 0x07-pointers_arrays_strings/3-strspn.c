@@ -6,7 +6,7 @@
  * @s: first pointer
  * @accept: second pointer
  *
- * Return: the number of bytes in the initial segment of s consisting of accep.
+ * Return: the number of bytes in the initial segment of s consisting of acce.
  */
 int _strspn(char *s, char *accept)
 {
