@@ -5,7 +5,7 @@
  * @haystack: first pointer
  * @needle: second pointer
  *
- * Return: the number of bytes in the initial segment of s consisting
+ * Return: the number of bytes in the initial segment of s consisting of acce.
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -13,15 +13,16 @@ int i, j, k, l;
 j = strlen(haystack) + 1;
 l = strlen(needle) + 1;
 
-for (i = 0; i < j && (*(haystack + i) != ','); i++)
-{
 for (k = 0; k < l; k++)
+{
+for (i = 0; i < j; i++)
 {
 if ((*(haystack + i) == *(needle + k)))
 {
-if (*(haystack + i - 1) == ' ')
-return (haystack + k);
+return (haystack + i);
 }
+else if ((i == j - 1 && (*(haystack + i) != *(needle + k))) || j < 2 || l < 2)
+return (0);
 }
 }
 return (0);
