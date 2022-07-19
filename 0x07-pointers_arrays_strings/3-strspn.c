@@ -18,7 +18,7 @@ for (i = 0; i < j && (*(s + i) != ' '); i++)
 {
 for (k = 0; k < l; k++)
 {
-if ((*(s + i) == *(accept + k)))
+if ((*(s + i) == *(accept + k)) && j > 1 && l > 1)
 {
 m = i + 1;
 }
