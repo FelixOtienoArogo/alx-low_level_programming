@@ -17,7 +17,8 @@ for (k = 0; k < l; k++)
 {
 for (i = 0; i < j; i++)
 {
-if ((*(haystack + i) == *(needle + k)))
+if ((*(haystack + i) == *(needle + k))
+&& (*(haystack + i + l - 2) == *(needle + k + l - 2)))
 {
 return (haystack + i);
 }
