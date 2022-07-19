@@ -1,19 +1,23 @@
 #include "main.h"
 #include<string.h>
+#include<stdio.h>
 /**
  * _strstr - this function locates a substring
  * @haystack: first pointer
  * @needle: second pointer
  *
- * Return: the number of bytes in the initial segment of s consisting of acce.
+ * Return: the number of bytes in the initial segment of s consisting of ae.
  */
 char *_strstr(char *haystack, char *needle)
 {
 int i, j, k, l;
 j = strlen(haystack) + 1;
 l = strlen(needle) + 1;
-
-for (k = 0; k < l; k++)
+if (l == 1)
+{
+return (needle);
+}
+for (k = 0; k < l && l > 1; k++)
 {
 for (i = 0; i < j; i++)
 {

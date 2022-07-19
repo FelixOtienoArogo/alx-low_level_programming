@@ -10,7 +10,7 @@ int main(void)
 {
     char *t;
 
-    t = _strstr("First, solve the problem. Then, write the code.", "solve");
+    t = _strstr("First, solve the problem. Then, write the code.", "");
     printf("%s\n", t);
     return (0);
 }
