@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 char *_strpbrk(char *, char *);
@@ -11,7 +10,7 @@ char *_strpbrk(char *, char *);
 int main(void)
 {
 	char *s = "First, solve the problem. Then, write the code.";
-	char *f = "[]{}()";
+	char *f = "School";
 	char *t;
 
 	t = _strpbrk(s, f);

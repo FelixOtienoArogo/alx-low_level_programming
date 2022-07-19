@@ -21,8 +21,8 @@ if ((*(s + i) == *(accept + k)))
 {
 return (s + i);
 }
-else
-return(0);
+else if (i == j - 1 && (*(s + i) != *(accept + k)))
+return (0);
 }
 }
 return (0);
