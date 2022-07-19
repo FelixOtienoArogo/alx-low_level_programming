@@ -8,7 +8,7 @@ int _atoi(char *s);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 void print_number(int n);
 char *rot13(char *);
-char *leet(char *);
+void print_chessboard(char (*a)[8]);
 char *_strstr(char *haystack, char *needle);
 char *_strpbrk(char *s, char *accept);
 unsigned int _strspn(char *s, char *accept);
