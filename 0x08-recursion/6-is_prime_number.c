@@ -11,17 +11,17 @@
 */
 int prime(int n, int index)
 {
-if(n < 2)
+if (n < 2)
 return (0);
 if (index > 0)
 {
 if (n % index == 0)
 return (0);
 else
-prime (n, index - 1);
+prime(n, index - 1);
 }
 if (n % index != 0)
-return (2);
+return (1);
 return (1);
 }
 
