@@ -10,7 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-int i, result;
+long int i, result;
+char **endptr;
+endptr = argv;
 result = 0;
 for (i = 1; i < argc; i++)
 {
@@ -20,8 +22,15 @@ printf("Error\n");
 return (1);
 }
 else
-result = (result) +(atoi(argv[i]));
+{
+result = (result) +(strtol(argv[i], endptr, 10));
+if (**endptr != '\0')
+{
+printf("Error\n");
+return (1);
 }
-printf("%d\n", result);
+}
+}
+printf("%ld\n", result);
 return (0);
 }
