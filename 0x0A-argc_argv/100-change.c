@@ -21,16 +21,22 @@ if (mon < 0)
 {
 result = 0;
 }
-if (mon == 25 || mon == 10 || mon == 5 || mon == 2 || mon == 1)
-result = 1;
-if (mon >= 25)
-result = (mon / 25) + (mon % 25);
-if (mon < 25 && mon >= 10)
-result = (mon % 10);
-if (mon < 10 && mon >= 5)
-result = (mon / 5) + (mon % 5);
-if (mon < 5 && mon >= 2)
-result = (mon / 2) + (mon % 2);
+else
+{
+result = mon / 25;
+mon = mon % 25;
+
+result = result + (mon / 10);
+mon = mon % 10;
+
+result = result + (mon / 5);
+mon = mon % 5;
+
+result = result + (mon / 2);
+mon = mon % 2;
+
+result = result + mon;
+}
 printf("%d\n", result);
 return (0);
 }
