@@ -21,10 +21,12 @@ arr = malloc(sizeof(int *) * height);
 for (i = 0; i < height; i++)
 {
 arr[i] = malloc(sizeof(int) * width);
-
 }
-if (arr == NULL)
-return (NULL);
 
+if (arr == NULL)
+{
+free (arr);
+return (NULL);
+}
 return (arr);
 }
