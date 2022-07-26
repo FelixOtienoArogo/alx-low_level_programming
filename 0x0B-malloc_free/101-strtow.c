@@ -19,7 +19,7 @@ return (NULL);
 if (av == NULL)
 return (NULL);
 
-arr = malloc(sizeof(*av) * ac - 12);
+arr = malloc(sizeof(*av) * ac);
 if (arr == NULL)
 return (NULL);
 
