@@ -33,5 +33,6 @@ for (i = 0; i <= size1; i++)
 arr[i] = s1[i];
 for (i = 0; i < n; i++)
 arr[i + size1] = s2[i];
+arr[size1 + n] = '\0';
 return (arr);
 }
