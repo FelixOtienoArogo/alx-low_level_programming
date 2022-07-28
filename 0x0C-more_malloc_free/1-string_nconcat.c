@@ -31,7 +31,7 @@ return (NULL);
 
 for (i = 0; i <= size1; i++)
 arr[i] = s1[i];
-for (i = 0; i <= n; i++)
+for (i = 0; i < n; i++)
 arr[i + size1] = s2[i];
 return (arr);
 }
