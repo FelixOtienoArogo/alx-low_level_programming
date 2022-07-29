@@ -29,7 +29,7 @@ return (ptr);
 if (ptr == NULL)
 {
 arr = malloc(new_size);
-free (ptr);
+free(ptr);
 return (arr);
 }
 if (new_size > old_size)
@@ -38,7 +38,7 @@ strcpy(arr, ptr);
 }
 if (new_size < old_size)
 {
-strcpy(arr, ptr);
+strncpy(arr, ptr, new_size);
 }
 
 free(ptr);
