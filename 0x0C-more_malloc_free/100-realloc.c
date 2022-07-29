@@ -13,21 +13,32 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-int *arr;
+void *arr;
+
 arr = malloc(new_size);
 
-if (arr == NULL)
+
+if (new_size == 0 && ptr != NULL)
 {
-exit(98);
+free(ptr);
+return (NULL);
 }
-if (new_size < old_size)
-arr = malloc(new_size);
+
 if (new_size == old_size)
 return (ptr);
 if (ptr == NULL)
 arr = malloc(new_size);
-if (new_size == 0 && ptr != NULL)
+
+if (new_size > old_size)
+{
+strcpy(arr, ptr);
+}
+if (new_size < old_size)
+{
+strcpy(arr, ptr);
+}
+
 free(ptr);
 
-return (ptr);
+return (arr);
 }
