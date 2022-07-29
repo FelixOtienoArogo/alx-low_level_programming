@@ -29,6 +29,7 @@ return (ptr);
 if (ptr == NULL)
 {
 arr = malloc(new_size);
+free (ptr);
 return (arr);
 }
 if (new_size > old_size)
