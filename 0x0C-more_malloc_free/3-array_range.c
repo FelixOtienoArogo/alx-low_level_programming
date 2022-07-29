@@ -15,11 +15,12 @@ int i;
 if (min > max)
 return (NULL);
 
-arr = malloc(sizeof(int) * (max - min + 1));
+arr = calloc((max - min + 1), sizeof(int));
 if (arr == NULL)
 return (NULL);
 
 for (i = min; i <= max; i++)
-arr[i] = i;
+arr[i - min] = i;
+
 return (arr);
 }
