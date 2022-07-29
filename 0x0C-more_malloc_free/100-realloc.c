@@ -27,8 +27,10 @@ return (NULL);
 if (new_size == old_size)
 return (ptr);
 if (ptr == NULL)
+{
 arr = malloc(new_size);
-
+return (arr);
+}
 if (new_size > old_size)
 {
 strcpy(arr, ptr);
