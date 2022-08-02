@@ -18,7 +18,8 @@ return (NULL);
 new = malloc(sizeof(dog_t));
 if (new == NULL)
 {
-free(new);
+free(name);
+free(owner);
 return (NULL);
 }
 
