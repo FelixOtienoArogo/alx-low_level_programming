@@ -1,3 +1,4 @@
-#ifndef ABS
-#define ABS(x) ((x < 0) ? (0 - x) : x)
-#endif
+#ifndef MACRO_H
+#define MACRO_H
+#define ABS(x) (((x) < 0) ? (0 - (x)) : (x))
+#endif/*MACRO_H*/
