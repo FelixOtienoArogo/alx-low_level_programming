@@ -1,7 +1,7 @@
-#include "main.h"
 #include "dog.h"
+#include<stdlib.h>
 /**
- *init_dog : A function to initialise dog
+ *init_dog - A function to initialise dog
  *
  *@d: the new dog
  *@name: its name
@@ -10,8 +10,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-struct dog *d;
-d -> name = name;
-d -> age = age;
-d -> owner = age;
+d->name = name;
+d->age = age;
+d->owner = owner;
 }
