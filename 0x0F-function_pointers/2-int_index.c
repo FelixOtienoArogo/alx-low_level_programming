@@ -16,11 +16,14 @@ int i, result;
 result = 0;
 if (size <= 0)
 return (-1);
+if (array && cmp)
+{
 for (i = 0; i < (int)size; i++)
 {
 result = cmp(array[i]);
 if (result != 0)
 return (i);
+}
 }
 return (-1);
 }
