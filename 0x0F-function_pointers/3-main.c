@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 int i, a, b;
 int (*fp)(int, int);
-if (argc != 4 || argv[2] == NULL)
+if (argc != 4 || argv[2] == NULL || strlen(argv[2]) != 1)
 {
 printf("Error\n");
 exit(98);
