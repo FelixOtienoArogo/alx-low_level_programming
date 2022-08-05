@@ -13,12 +13,12 @@ int main(int argc, char **argv)
 {
 int i, a, b;
 int (*fp)(int, int);
-if (argc != 4 || argv[2] == NULL || strlen(argv[2]) != 1)
+if (argc != 4 || argv[2] == NULL)
 {
 printf("Error\n");
 exit(98);
 }
-if (get_op_func(argv[2]) == NULL || argv[2][1] == '0')
+if (get_op_func(argv[2]) == NULL || argv[2][1] == '0' || strlen(argv[2]) != 1)
 {
 printf("Error\n");
 exit(99);
