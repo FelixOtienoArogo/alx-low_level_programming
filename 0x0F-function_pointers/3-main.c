@@ -18,7 +18,7 @@ if (argc != 4)
 printf("Error\n");
 exit(98);
 }
-if (argv[2] == NULL || strlen(argv[2]) != 1)
+if (argv[2] == NULL)
 {
 printf("Error\n");
 exit(98);
