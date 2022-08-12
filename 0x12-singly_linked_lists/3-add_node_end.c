@@ -18,9 +18,11 @@ const char *temp;
 temp = strdup(str);
 new = malloc(sizeof(list_t));
 
-if (new == NULL)
+if (new == NULL || temp == NULL)
+{
+free(new);
 return (NULL);
-
+}
 new->str = (char *)temp;
 new->len = strlen(temp);
 new->next = NULL;
