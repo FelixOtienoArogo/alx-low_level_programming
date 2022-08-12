@@ -4,12 +4,12 @@
 #include "lists.h"
 
 /**
- *print_list - to print the singly linked list
- *
- *@h: the list to be printed
- *
- *Return: the size of the list
- */
+*print_list - to print the singly linked list
+*
+*@h: the list to be printed
+*
+*Return: the size of the list
+*/
 size_t print_list(const list_t *h)
 {
 const list_t *temp;
