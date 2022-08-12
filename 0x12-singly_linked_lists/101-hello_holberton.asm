@@ -13,6 +13,6 @@ _start:
 	mov rax,0
 	call printf
 
-	mov rbx,0
-	xor rax, 1
-	int 0x80
+	mov rax,60
+	mov rdi, 0
+	syscall
