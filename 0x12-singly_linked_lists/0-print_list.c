@@ -8,6 +8,7 @@
  *
  *@h: the list to be printed
  *
+ *Return: the size of the list
  */
 size_t print_list(const list_t *h)
 {
