@@ -1,6 +1,6 @@
 section .data
 	text1 db "Hello, Holberton",0xA
-	fmt db "Hello, Holberton",0xA,0
+	fmt db "Hello, Holberton",0xA
 
 section .text
 	global main
