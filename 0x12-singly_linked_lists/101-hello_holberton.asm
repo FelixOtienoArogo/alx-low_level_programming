@@ -1,6 +1,6 @@
 section .data
-	text1 db "Hello, Holberton",0xA, 0
-	fmt db "%s",10,0
+	text1 db "Hello, Holberton",0xA
+	fmt db "Hello, Holberton",0xA,0
 
 section .text
 	global main
@@ -9,9 +9,9 @@ main:
 _start:
 	mov rdx, text1
 	mov rsi, 0
-	mov rdi, text1
+	mov rdi, fmt
 	mov rax,0
-	call printf wrt ..plt
+	call printf
 
 	mov rbx,0
 	xor rax, 1
