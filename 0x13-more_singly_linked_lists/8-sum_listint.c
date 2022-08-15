@@ -1,0 +1,26 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ *sum_listint - sums the data in a list
+ *
+ *@head: the head of the list
+ *
+ *Return: the sum of all the data in a list
+ */
+int sum_listint(listint_t *head)
+{
+listint_t *cur;
+int i;
+
+i = 0;
+cur = head;
+while (cur != NULL)
+{
+i = i + cur->n;
+cur = cur->next;
+}
+return (i);
+}
