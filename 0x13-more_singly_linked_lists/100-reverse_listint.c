@@ -16,7 +16,7 @@ listint_t *cur, *prev;
 
 cur = *head;
 prev = NULL;
-while(cur != NULL)
+while (cur != NULL)
 {
 *head = cur->next;
 cur->next = prev;
@@ -25,5 +25,5 @@ cur = *head;
 }
 *head = prev;
 
-return(*head);
+return (*head);
 }
