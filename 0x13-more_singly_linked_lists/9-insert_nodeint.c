@@ -39,5 +39,5 @@ if (i == idx)
 new->next = cur->next;
 cur->next = new;
 }
-return (*head);
+return (new);
 }
