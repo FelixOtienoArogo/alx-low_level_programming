@@ -16,6 +16,10 @@ listint_t *cur;
 if (head != NULL)
 {
 cur = head;
+if (cur->next == NULL)
+free(cur);
+else
+{
 while (cur->next != NULL)
 {
 cur = cur->next;
@@ -26,5 +30,6 @@ free(cur);
 }
 free(cur);
 free(head);
+}
 }
 }
