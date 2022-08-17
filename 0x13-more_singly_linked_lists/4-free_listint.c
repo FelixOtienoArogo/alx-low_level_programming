@@ -1,59 +1,30 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * _create_list - Create a list
+ *free_listint - a function to free a list
  *
- * @n: Number of elements
+ *@head: the head of the list
  *
- * Return: A pointer to the first element of the created list
+ *Return: nothing
  */
-listint_t *_create_list(unsigned int n, ...)
+void free_listint(listint_t *head)
 {
-	va_list args;
-	listint_t *list;
-	listint_t *tmp;
-	listint_t *prev;
-	unsigned int i;
-	int nb;
+listint_t *cur;
+if (head != NULL)
+{
+cur = head;
+while (cur->next != NULL)
+{
+cur = cur->next;
 
-	va_start(args, n);
-	prev = tmp = list = NULL;
-	i = 0;
-	while (i < n)
-	{
-		nb = va_arg(args, int);
-		tmp = malloc(sizeof(*tmp));
-		if (!tmp)
-			return (NULL);
-		tmp->n = nb;
-		tmp->next = NULL;
-		if (!list)
-			list = tmp;
-		if (prev)
-			prev->next = tmp;
-		prev = tmp;
-		++i;
-	}
-	va_end(args);
-	return (list);
+
+if (cur->next)
+free(cur);
 }
-
-/**
- * main - check the code .
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	listint_t *head;
-	size_t n;
-
-	head = _create_list(1, 9);
-	n = print_listint(head);
-	printf("-> %lu elements\n", n);
-	free_listint(head);
-	return (0);
+free(cur);
+free(head);
+}
 }
