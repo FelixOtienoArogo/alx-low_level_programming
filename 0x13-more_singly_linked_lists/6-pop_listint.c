@@ -16,7 +16,7 @@ listint_t *cur;
 int i;
 
 i = 0;
-if(*head)
+if (*head)
 {
 cur = *head;
 i = cur->n;
