@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- *binary_to_int - function that converts a binary number to an int
+ *binary_to_uint - function that converts a binary number to an int
  *
  *@b: the binary number
  *
