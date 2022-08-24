@@ -31,14 +31,14 @@ if (fd == -1)
 {
 return (-1);
 }
-if (text_content == NULL)
-{
-return (1);
-}
 t = write(fd, text_content, cont);
 if (t == -1)
 {
 return (-1);
+}
+if (text_content == NULL)
+{
+return (1);
 }
 close(fd);
 return (1);
