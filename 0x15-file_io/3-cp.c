@@ -30,7 +30,7 @@ exit(97);
 NAME_OF_THE_FILE = argv[1];
 fd = open(argv[1], O_RDWR);
 stat(argv[1], &sb);
-size = 1024;
+size = sb.st_size;
 buf = malloc(sizeof(char) * size * 8);
 a = read(fd, buf, size);
 if (a == -1 || fd == -1)
