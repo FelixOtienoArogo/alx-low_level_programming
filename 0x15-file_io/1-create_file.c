@@ -22,7 +22,7 @@ size_t cont;
 ssize_t t;
 
 fd = open(filename, O_CREAT | O_RDWR, 0600);
-cont = strlen(text_content) + 1;
+cont = strlen(text_content);
 if (filename == NULL)
 {
 return (-1);
