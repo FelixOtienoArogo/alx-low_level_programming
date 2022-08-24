@@ -39,6 +39,12 @@ printf("Error: Can't read from file %s\n", NAME_OF_THE_FILE);
 exit(98);
 }
 close(fd);
+a = close(fd);
+if (a == -1)
+{
+printf("Error: Can't close fd %d\n", fd);
+exit(100);
+}
 /* WRITE */
 fd = open(argv[2], O_CREAT | O_RDWR, 0600);
 a = write(fd, buf, size);
