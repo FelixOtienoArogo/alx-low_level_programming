@@ -37,7 +37,7 @@ if (a == -1)
 {
 return (0);
 }
-printf("%s\n", buf);
+printf("%s", buf);
 close(fd);
 
 free(buf);
