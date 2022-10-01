@@ -24,8 +24,9 @@ return (NULL);
 new->n = temp;
 new->next = *head;
 new->prev = NULL;
+if ((*head) != NULL)
+(*head)->prev = new;
 *head = new;
 
-free(new);
 return (new);
 }
