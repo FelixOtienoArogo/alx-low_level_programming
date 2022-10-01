@@ -24,5 +24,8 @@ while ((temp->next != NULL) && (i < index))
 temp = temp->next;
 i++;
 }
+if (i <= index)
 return (temp);
+else
+return (NULL);
 }
