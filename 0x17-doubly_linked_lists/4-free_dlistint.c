@@ -17,8 +17,8 @@ current = head;
 while (current->next != NULL)
 {
 current = current->next;
-free(current);
+free(current->prev);
 }
-free(head);
+free(current);
 }
 }
