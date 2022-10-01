@@ -26,6 +26,6 @@ new->next = *head;
 new->prev = NULL;
 *head = new;
 
-return (new);
 free(new);
+return (new);
 }
