@@ -14,26 +14,71 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-hash_table_t *new;
-unsigned long int i;
-new = malloc(sizeof(hash_table_t));
+unsigned long int index;
+hash_node_t *node;
 
-if (new == NULL)
+if (key == NULL)
+return (0);
+
+index = key_index((unsigned char *)key, ht->size);
+node = ht->array[index];
+
+if (node == NULL)
 {
-fprintf(stderr, "Error: malloc failed\n");
-return (NULL);
+node = set_pair(key, value);
+node->next = NULL;
+ht->array[index] = node;
+
+return (1);
 }
-new->size = size;
-new->array = malloc(sizeof(hash_node_t *) * size);
-if (new->array == NULL)
+while (node != NULL)
 {
-fprintf(stderr, "Error: malloc failed\n");
-return (NULL);
-}
-for (i = 0; i < size; i++)
+if (strcmp(node->key, key) == 0)
 {
-new->array[i] = NULL;
+if (strcmp(node->value, value) == 0)
+return (1);
+free(node->value);
+node->value = malloc(strlen(value) + 1);
+if (node->value == NULL)
+return (0);
+strcpy(node->value, value);
+return (1);
 }
-return (new);
+node = node->next;
+}
+if (node == NULL)
+{
+node = set_pair(key, value);
+node->next = ht->array[index];
+ht->array[index] = node;
+return (1);
+}
+return (0);
 }
 
+/**
+ * set_pair - mallocs a key/value pair to the hash table.
+ * @key: the key, a string that cannot be empty.
+ * @value: the value associated with the key, can be an empty string.
+ *
+ * Return: pointer to the new node.
+ */
+hash_node_t *set_pair(const char *key, const char *value)
+{
+hash_node_t *node;
+node = malloc(sizeof(hash_node_t));
+
+if (node == NULL)
+return (0);
+
+node->key = malloc(strlen(key) + 1);
+if (node->key == NULL)
+return (0);
+node->value = malloc(strlen(value) + 1);
+if (node->value == NULL)
+return (0);
+strcpy(node->key, key);
+strcpy(node->value, value);
+
+return (node);
+}
