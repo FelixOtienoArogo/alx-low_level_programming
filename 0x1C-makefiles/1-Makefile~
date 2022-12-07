@@ -1,4 +1,0 @@
-SRC = main.c holbeton.c
-CC = gcc
-all: $(SRC)
-	$(CC) $(SRC) -o school
