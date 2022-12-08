@@ -1,4 +1,5 @@
-#!usr/bin/python3
+#!/usr/bin/python3
+
 """
 reruns the perimenter of the the island described in grid
 """
@@ -14,10 +15,20 @@ def island_perimeter(grid):
     Island doesn't have lakes
     """
     ans = 0
-    ret = 0
-    for i in grid:
-        for j in i:
-            ans += j
-    if (ans % 2):
-        ret = (3 * 2) + (2 * (ans - 2))
-    return (ret)
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if (grid[i][j] == 1):
+                if((i < len(grid) - 1) and (grid[i+1][j] == 0)):
+                    ans += 1
+                elif((j < len(grid[i]) - 1) and (grid[i][j+1] == 0)):
+                    ans += 1
+                elif( (i > 0) and (grid[i-1][j] == 0)):
+                    ans += 1
+                elif( (j > 0) and (grid[i][j-1] == 0)):
+                    ans += 1
+                if( i == len(grid) - 1):
+                    ans += 1
+                if( j == len(grid[i]) - 1):
+                    ans += 1
+                
+    return (ans)
