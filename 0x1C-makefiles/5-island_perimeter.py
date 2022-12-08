@@ -15,20 +15,24 @@ def island_perimeter(grid):
     Island doesn't have lakes
     """
     ans = 0
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            if (grid[i][j] == 1):
+    for i, row in enumerate(grid):
+        for j, value in enumerate(row):
+            if (value == 1):
                 if((i < len(grid) - 1) and (grid[i+1][j] == 0)):
                     ans += 1
-                elif((j < len(grid[i]) - 1) and (grid[i][j+1] == 0)):
+                if((j < len(grid[i]) - 1) and (grid[i][j+1] == 0)):
                     ans += 1
-                elif( (i > 0) and (grid[i-1][j] == 0)):
+                if( (i > 0) and (grid[i-1][j] == 0)):
                     ans += 1
-                elif( (j > 0) and (grid[i][j-1] == 0)):
+                if( (j > 0) and (grid[i][j-1] == 0)):
                     ans += 1
                 if( i == len(grid) - 1):
                     ans += 1
                 if( j == len(grid[i]) - 1):
+                    ans += 1
+                if(j == 0):
+                    ans += 1
+                if(i == 0):
                     ans += 1
                 
     return (ans)
