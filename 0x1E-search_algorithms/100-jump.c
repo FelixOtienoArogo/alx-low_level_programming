@@ -38,7 +38,10 @@ return (j);
 }
 }
 }
+if(i > max)
+{
 printf("Value found between indexes [%d] and [%d]\n", i - step, i);
 printf("Value checked array[%d] = [%d]\n", i - step, array[i - step]);
+}
 return (-1);
 }
